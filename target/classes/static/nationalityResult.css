@@ -1,0 +1,33 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f7f7;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.results {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    display: inline-block;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+li {
+    padding: 5px 0;
+}
+a {
+    display: inline-block;
+    margin-top: 20px;
+    color: #337ab7;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
