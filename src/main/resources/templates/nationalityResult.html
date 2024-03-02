@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/nationalityResult.css">
+    <title>Nationality Result</title>
+</head>
+<body>
+    <h2 th:text="'Results: ' + ${nationality.name()}"></h2>
+    <div th:unless="${nationality.countries().isEmpty()}">
+        <ul th:each="country : ${nationality.countries()}">
+            <li th:text="'Country: ' + ${country.countryId()} + ', Probability: ' + ${country.probability()}">
+                Country Probability
+            </li>
+        </ul>
+
+    </div>
+    <div th:if="${nationality.countries().isEmpty()}">
+        <p>No data found</p>
+    </div>
+    <a href="/">Try another name</a>
+</body>
+</html>
