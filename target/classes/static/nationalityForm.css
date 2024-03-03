@@ -7,17 +7,21 @@ body {
     height: 90vh;
     background-color: #f4f4f4;
 }
+
+html {
+    font-size: calc(1em + 0.5vw);
+}
 .container {
-    padding: 2rem;
-    width: 30%;
+    width: 50%;
     min-width: 300px;
     max-width: 80%;
     margin: auto;
     text-align: center;
+    padding: 1rem;
 }
 
 h1 {
-    font-size: 3.5rem;
+    font-size: 4vw;
     margin-bottom: 1rem;
     padding: 1rem;
 }
@@ -33,6 +37,8 @@ form {
 }
 
 input[type="text"] {
+    width: 100%;
+    box-sizing: border-box;
     border: 2px solid #ccc;
     border-radius: 4px;
     padding: 1rem;
@@ -52,11 +58,31 @@ button {
 button:hover {
     background-color: #0056b3;
 }
+
+/* Media query for tablets*/
 @media (max-width: 768px) {
     h1 {
-        font-size: 5vw;
+        font-size: 6vw;
     }
     .container {
-        width: 80%;
+        width: 90%;
+    }
+}
+
+/* Media query for smartphones */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 8vw;
+    }
+    .container {
+        width: 95%;
+        padding: 1rem;
+    }
+    input[type="text"], button {
+        padding: 0.75rem;
+        font-size: 1em;
+    }
+    form {
+        padding: 1rem;
     }
 }
