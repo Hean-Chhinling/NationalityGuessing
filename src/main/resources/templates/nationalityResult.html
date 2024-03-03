@@ -6,18 +6,21 @@
     <title>Nationality Result</title>
 </head>
 <body>
-    <h2 th:text="'Results: ' + ${nationality.name()}"></h2>
-    <div th:unless="${nationality.countries().isEmpty()}">
-        <ul th:each="country : ${nationality.countries()}">
-            <li th:text="'Country: ' + ${country.countryId()} + ', Probability: ' + ${country.probability()}">
-                Country Probability
-            </li>
-        </ul>
+    <div class="container">
+        <h2 th:text="'Results: ' + ${nationality.name()}"></h2>
+        <div th:unless="${nationality.countries().isEmpty()}">
+            <ul th:each="country : ${nationality.countries()}">
+                <li th:text="'Country: ' + ${country.countryId()} + ', Probability: ' + ${country.probability()}">
+                    Country Probability
+                </li>
+            </ul>
 
+        </div>
+
+        <div th:if="${nationality.countries().isEmpty()}">
+            <p>No data found</p>
+        </div>
+        <a href="/">Try another name</a>
     </div>
-    <div th:if="${nationality.countries().isEmpty()}">
-        <p>No data found</p>
-    </div>
-    <a href="/">Try another name</a>
 </body>
 </html>
