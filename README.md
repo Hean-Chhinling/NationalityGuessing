@@ -3,6 +3,10 @@
 
 NationalityGuessing is a web application that predicts the likely nationality of a user based on their name. Utilizing the Nationalize.io API, the application evaluates the input name and returns possible countries of origin along with the probabilities for each. This project is built using the Spring Boot framework, Thymeleaf, Java with Maven for the backend, and HTML with CSS for the frontend.
 
+Try it at: https://nationalityguessing.onrender.com
+
+https://github.com/Hean-Chhinling/NationalityGuessing/assets/92643868/4cf40640-f3bb-4373-b545-1ac6f0895642
+
 ## Features
 
 - User-friendly interface to input names.
